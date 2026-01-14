@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -35,7 +36,9 @@ export default function RootLayout({ children }) {
             <WishlistProvider>
               <CartProvider>
                 <InitialLoader />
-                <PageLoader />
+                <Suspense fallback={null}>
+                  <PageLoader />
+                </Suspense>
                 <Navbar />
                 <main className="flex-grow pt-20">
                   {children}
