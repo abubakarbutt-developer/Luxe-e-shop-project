@@ -107,7 +107,7 @@ export default function Home() {
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold tracking-tight mb-12 text-center">Shop by Category</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category) => (
               <Link key={category.name} href={`/shop?category=${category.name.toLowerCase()}`} className="group relative h-96 rounded-lg overflow-hidden cursor-pointer">
                 <Image
@@ -130,7 +130,7 @@ export default function Home() {
       {/* Benefits */}
       <section className="py-20 bg-background border-t border-border">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 text-center">
             <div className="flex flex-col items-center">
               <Truck className="w-12 h-12 text-accent mb-4" />
               <h3 className="text-lg font-bold mb-2">Free Shipping</h3>

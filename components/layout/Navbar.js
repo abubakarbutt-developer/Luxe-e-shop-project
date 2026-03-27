@@ -40,7 +40,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center space-x-8">
+                <div className="hidden lg:flex items-center space-x-8">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -54,7 +54,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Icons */}
-                <div className="hidden md:flex items-center space-x-6">
+                <div className="hidden lg:flex items-center space-x-6">
                     <Link href="/shop" className="hover:text-accent transition-colors">
                         <Search className="w-5 h-5" />
                     </Link>
@@ -109,7 +109,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden"
+                    className="lg:hidden"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle Menu"
                 >
@@ -124,7 +124,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-background border-b border-border overflow-hidden"
+                        className="lg:hidden bg-background border-b border-border overflow-hidden"
                     >
                         <div className="px-4 py-6 space-y-4 flex flex-col">
                             {navLinks.map((link) => (
@@ -145,7 +145,7 @@ export default function Navbar() {
                                 </button>
                                 <Link href="/cart" className="flex items-center space-x-2">
                                     <ShoppingBag className="w-5 h-5" />
-                                    <span>Cart ({isLoaded ? cartCount : 0})</span>
+                                    <span>Cart ({isCartLoaded ? cartCount : 0})</span>
                                 </Link>
                             </div>
                         </div>

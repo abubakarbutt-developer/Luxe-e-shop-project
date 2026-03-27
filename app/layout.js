@@ -8,6 +8,7 @@ import { WishlistProvider } from "@/context/WishlistContext";
 import { ThemeProvider } from "@/context/ThemeContext";
 import InitialLoader from "@/components/ui/InitialLoader";
 import PageLoader from "@/components/ui/PageLoader";
+import CompetitionPopup from "@/components/features/CompetitionPopup";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,7 +41,8 @@ export default function RootLayout({ children }) {
                   <PageLoader />
                 </Suspense>
                 <Navbar />
-                <main className="flex-grow pt-20">
+                <CompetitionPopup />
+                <main className="grow pt-20">
                   {children}
                 </main>
                 <Footer />
